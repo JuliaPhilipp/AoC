@@ -1,4 +1,4 @@
-puzzle_input <- read.delim("~/Documents/AoC/2020/1/puzzle_input.txt", header = FALSE)
+puzzle_input <- read.delim("~/Documents/AoC/2020/01/puzzle_input.txt", header = FALSE)
 
 # part 1
 for(i in 1:nrow(puzzle_input)) {
@@ -6,16 +6,19 @@ for(i in 1:nrow(puzzle_input)) {
   
   # test all other lines
   for (k in (i+1):nrow(puzzle_input)){
-    other_line <- puzzle_input[k,]
-    test_sum <- sum(current_line, other_line)
-    
-    if (test_sum == 2020){
-      test_product <- current_line * other_line
-      print(test_product)
-      break
+    if (k < nrow(puzzle_input)){
+      other_line <- puzzle_input[k,]
+      test_sum <- sum(current_line, other_line)
       
-    } else {}
+      if (test_sum == 2020){
+        test_product <- current_line * other_line
+        print(test_product)
+        break
+      } 
+    }
+    
   }
+  
 }
 
 ## part 2
