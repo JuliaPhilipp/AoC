@@ -12,7 +12,7 @@ for i in puzzle_input, k in puzzle_input
 end
 
 # Part 2
-ffor i in puzzle_input, j in puzzle_input, k in puzzle_input
+for i in puzzle_input, j in puzzle_input, k in puzzle_input
     test_sum = i+k+j
     if test_sum == 2020
         test_product = i*j*k
